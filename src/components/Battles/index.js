@@ -13,9 +13,13 @@ function Battles({ fetchData, battles, error, pending }) {
     <div className="battles">
       {pending && <h2>LOADING......</h2>}
       {error && <h3>Something terrible happened</h3>}
-      {battles.map((battle, index) => {
-        return <Battle index={index} />;
-      })}
+      {battles.length > 0 ? (
+        battles.map((battle, index) => {
+          return <Battle index={index} />;
+        })
+      ) : (
+        <p>No such battle happened</p>
+      )}
     </div>
   );
 }
