@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "amit",
   "license": "MIT",
+  "engines": {
+    "node": "14.15.1"
+  },
   "scripts": {
     "heroku-prebuild": "yarn add -D",
     "start": "webpack serve",
