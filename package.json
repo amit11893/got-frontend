@@ -5,7 +5,7 @@
   "author": "amit",
   "license": "MIT",
   "scripts": {
-    "heroku-prebuild": "npm install --dev",
+    "heroku-prebuild": "yarn add -D",
     "start": "webpack serve",
     "build": "webpack --mode production"
   },
