@@ -5,6 +5,7 @@
   "author": "amit",
   "license": "MIT",
   "scripts": {
+    "heroku-prebuild": "npm install --dev",
     "start": "webpack serve",
     "build": "webpack --mode production"
   },
