@@ -8,7 +8,6 @@
     "node": "14.15.1"
   },
   "scripts": {
-    "heroku-prebuild": "yarn install --dev",
     "start:dev": "webpack serve",
     "start": "node server.js",
     "build": "webpack --mode production",
