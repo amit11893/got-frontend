@@ -11,7 +11,7 @@ const Search = ({ kings, locations, fetchData }) => {
   console.log('kings:', kings);
   console.log('locations', locations);
   const fetchQuery = () => {
-    let url = 'http://localhost:3000/search?';
+    let url = '/search?';
     if (!!kingInput) {
       url = url.concat(`king=${kingInput}&`);
     }

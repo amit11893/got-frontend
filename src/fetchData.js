@@ -7,7 +7,7 @@ import {
 function fetchData(url) {
   return (dispatch) => {
     dispatch(fetchDataPending());
-    fetch(url)
+    fetch(process.env.BACKEND_URL + url)
       .then((res) => res.json())
       .then((res) => {
         if (res.error) {

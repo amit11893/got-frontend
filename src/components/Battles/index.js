@@ -7,7 +7,7 @@ import fetchData from './../../fetchData';
 
 function Battles({ fetchData, battles, error, pending }) {
   useEffect(() => {
-    fetchData('http://localhost:3000/list');
+    fetchData('/list');
   }, []);
   return (
     <div className="battles">
