@@ -20,9 +20,9 @@
 .search {
   display: flex;
   justify-content: center;
-  /* padding-bottom: 3vh; */
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: stretch;
+  height: 2vh;
 }
 
 .search div {
@@ -37,6 +37,10 @@
 
 .search input {
   font-size: large;
+}
+
+.search button {
+  align-self: center;
 }
 
 .armies {
@@ -81,5 +85,8 @@
 @media (max-width: 700px) {
   .battle {
     flex-basis: 95%;
+  }
+  .search {
+    height: 4em;
   }
 }
