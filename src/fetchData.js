@@ -7,7 +7,7 @@ import {
 function fetchData(url) {
   return (dispatch) => {
     dispatch(fetchDataPending());
-    fetch(`${process.env.BACKEND_URL || 'html://localhost:8080'}${url}`)
+    fetch(`${'https://got-back.herokuapp.com'}${url}`)
       .then((res) => res.json())
       .then((res) => {
         if (res.error) {
