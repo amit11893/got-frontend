@@ -20,10 +20,9 @@
 .search {
   display: flex;
   justify-content: center;
-  padding-bottom: 3vh;
+  /* padding-bottom: 3vh; */
   flex-wrap: wrap;
   align-items: baseline;
-  height: 6vh;
 }
 
 .search div {

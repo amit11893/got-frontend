@@ -1,5 +1,7 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -20,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|jpe?g)/,
@@ -42,5 +44,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {},
     }),
+    new MiniCssExtractPlugin(),
+    new CompressionWebpackPlugin(),
   ],
 };

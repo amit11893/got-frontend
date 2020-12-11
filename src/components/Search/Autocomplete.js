@@ -2,7 +2,6 @@ import React from 'react';
 import Downshift from 'downshift';
 
 function AutoComplete({ data, label, onChange }) {
-  console.log(data);
   return (
     <Downshift onChange={onChange}>
       {({
@@ -14,10 +13,19 @@ function AutoComplete({ data, label, onChange }) {
         highlightedIndex,
         inputValue,
         selectedItem,
+        clearSelection,
       }) => (
         <div>
           <label {...getLabelProps()}>{label}</label>
-          <input {...getInputProps()} />
+          <input
+            {...getInputProps({
+              onChange: (e) => {
+                if (e.target.value === '') {
+                  clearSelection();
+                }
+              },
+            })}
+          />
           <ul className="suggestions" {...getMenuProps()}>
             {isOpen
               ? data
@@ -32,7 +40,6 @@ function AutoComplete({ data, label, onChange }) {
                         key: { item },
                         index,
                         item,
-                        onKeyDown: () => console.log(highlightedIndex),
                       })}
                       style={{
                         backgroundColor:

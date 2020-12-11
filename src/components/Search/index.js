@@ -8,8 +8,6 @@ import { bindActionCreators } from 'redux';
 const Search = ({ kings, locations, fetchData }) => {
   const [kingInput, setKingInput] = useState('');
   const [locationInput, setLocationInput] = useState('');
-  console.log('kings:', kings);
-  console.log('locations', locations);
   const fetchQuery = () => {
     let url = '/search?';
     if (!!kingInput) {
@@ -18,6 +16,8 @@ const Search = ({ kings, locations, fetchData }) => {
     if (!!locationInput) {
       url = url.concat(`location=${locationInput}`);
     }
+    setKingInput('');
+    setLocationInput('');
     fetchData(url);
   };
   return (
