@@ -21,8 +21,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: stretch;
-  height: 2vh;
+  height: 4vh;
+  align-items: flex-start;
 }
 
 .search div {
@@ -37,12 +37,14 @@
 
 .search input {
   font-size: large;
+  margin: 0.5em;
 }
 
 .search button {
-  align-self: center;
+  margin: 0.9em;
+  font-size: large;
+  box-shadow: 0.2em 0.2em #777777;
 }
-
 .armies {
   display: flex;
   color: black;
@@ -87,6 +89,6 @@
     flex-basis: 95%;
   }
   .search {
-    height: 4em;
+    height: 10em;
   }
 }
